@@ -7,6 +7,9 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background: #f1f1f1;
 }
+h1{
+  text-align: center;
+}
 .main {
   width: 70%;
   margin: 0 auto;
@@ -115,6 +118,11 @@ footer.starCount {
       color: #fff;
       margin: 5px;
     
+}
+.rm-cart-btn{
+  background-color: #b5080d;
+  color: #fff;
+  margin: 5px;
 }
 .unfavourite-btn {
   background-color: #db2828;
