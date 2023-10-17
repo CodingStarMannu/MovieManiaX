@@ -35,18 +35,23 @@ class MovieCard extends Component{
                     <div className="price">Rs. {price}</div>
 
                     <div className="footer">
-                        <div className="rating">{rating}</div>
+                        <div className="rating">
+                            {rating}
+                        </div>
                         <div className="star-dis">
                             <img className="str-btn" src="https://cdn-icons-png.flaticon.com/128/56/56889.png" alt="Decrease" 
-                            onClick={()=> {decStars(movies)}}/>
+                            onClick={()=> {decStars(movies)}}
+                            />
 
                             <img className="stars"
-                             src="https://cdn-icons-png.flaticon.com/128/1828/1828884.png" alt="Star" />
+                             src="https://cdn-icons-png.flaticon.com/128/1828/1828884.png" alt="Star"
+                              />
 
                             {/* <img className="str-btn" src="https://cdn-icons-png.flaticon.com/128/3524/3524388.png" alt="Increase"
                             onClick={this.addStars.bind(this)} /> this is on way of binding*/}
                             <img className="str-btn" src="https://cdn-icons-png.flaticon.com/128/3524/3524388.png" alt="Increase"
-                            onClick={() => {addStars(movies)}} />
+                            onClick={() => {addStars(movies)}} 
+                            />
                              <span>{stars}</span>
 
 
