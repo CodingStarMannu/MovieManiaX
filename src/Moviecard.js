@@ -16,7 +16,9 @@ class MovieCard extends Component{
         // const {movies:data} = this.props;
         // console.log(data);
         // const {title, plot, price, rating,stars,fav,isInCart} = data; we can write it like this also
-        const {title, plot, price, rating,stars,fav,isInCart} = this.props.movies;
+    
+        const {title, plot, poster, price, rating,stars,fav,isInCart} =  this.props.movies;
+        
 
      
 
@@ -24,9 +26,11 @@ class MovieCard extends Component{
 
         return (
          <div className="main">
-            <div className="movie-card">
+                <div className="movie-card">
+
+                {/**Left section of Movie Card */}
                 <div className="left">
-                    <img src="https://img.goodfon.com/original/1920x1080/6/2f/mstiteli-voina-beskonechnosti-avengers-infinity-war-komiks-1.jpg" alt="Poster" />
+                    <img alt="poster" src={poster} />
                 </div>
                 <div className="right">
                     {/* <div className="title">{this.state.title}</div> */}

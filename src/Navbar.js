@@ -56,7 +56,7 @@ class Navbar extends React.Component {
       <>
       <Nav>
         
-      <Title>MOVIE APP</Title>
+      <Title>MovieManiaX</Title>
         
         <CartIconContainer>
             <CartImg alt="Cart-Icon" 
