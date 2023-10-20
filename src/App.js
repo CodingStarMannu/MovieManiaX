@@ -9,7 +9,8 @@ class App extends React.Component {
     super();
     //Creating the state object 
     this.state = {
-      movies : movies
+      movies : movies, 
+      cartCount :0
   } 
 }
 
@@ -59,24 +60,34 @@ this.setState({
 
 
 handleToggleCart = (movie)=>{
-const {movies} = this.state;
+let {movies,cartCount} = this.state;
 
 const movieId = movies.indexOf(movie);
 
 movies[movieId].isInCart  = !movies[movieId].isInCart;
 console.log(movies[movieId].isInCart);
 
+if(movies[movieId].isInCart){
+  cartCount += 1;
+}else{
+  cartCount -=1;
+}
+
 this.setState({
-    movies
-})
+    movies,
+    cartCount
+});
+
+console.log(cartCount);
+
 }
 
   render(){
-    const {movies} = this.state;
+    const {movies, cartCount} = this.state;
     
   return (
     <>
-    <Navbar/>
+    <Navbar cartCount={cartCount}/>
     <MovieList movies = {movies}
                             key ={movies.id}
                             addStars = {this.handleIncStar}
